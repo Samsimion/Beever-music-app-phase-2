@@ -1,0 +1,30 @@
+/* components/SearchBar.module.css */
+.searchBar {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.searchBar input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 999px;
+  width: 250px;
+}
+
+.searchBar button {
+  padding: 0.5rem 1rem;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.searchBar button:hover {
+  background-color: #4b45c4;
+}
