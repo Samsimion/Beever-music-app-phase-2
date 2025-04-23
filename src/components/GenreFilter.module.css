@@ -1,0 +1,27 @@
+.genreFilter {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  .genreButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .genreButtons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #f6c90e;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .genreButtons button:hover {
+    background-color: #ffaf00;
+  }
+  
