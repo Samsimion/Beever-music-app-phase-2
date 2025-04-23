@@ -2,19 +2,19 @@
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
-function Trending() {
+function Trending({onAddToFavorites}){
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
     fetch("https://itunes.apple.com/search?term=trending&media=music")
       .then((res) => res.json())
       .then((data) => setTrending(data.results));
-  }, []);
+  }, []);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
 
   return (
-    <section>
+    <section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
       <h3>🔥 Trending Now</h3>
-      <SongList songs={trending} />
+      <SongList songs={trending} onAddToFavorites={onAddToFavorites}/>
     </section>
   );
 }

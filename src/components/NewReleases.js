@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
-function NewReleases() {
+function NewReleases({ onAddToFavorites }) {
   const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
@@ -14,8 +14,8 @@ function NewReleases() {
   return (
     <section>
       <h3>🆕 New Releases</h3>
-      <SongList songs={newReleases} />
-    </section>
+      <SongList songs={newReleases}  onAddToFavorites={onAddToFavorites}/>
+    </section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
   );
 }
 

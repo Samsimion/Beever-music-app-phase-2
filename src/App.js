@@ -9,6 +9,7 @@ import PopularArtists from "./components/PopularArtists";
 import NewReleases from "./components/NewReleases";
 import EditorsPicks from "./components/EditorsPicks";
 import GenreFilter from "./components/GenreFilter";
+import Favorites from "./components/Favorites";
 
 function App() {
   const [songs, setSongs] = useState([]);
@@ -45,6 +46,21 @@ function App() {
         setSongs(filtered);
       });
   }
+
+  function handleAddToFavorites(song) {
+    fetch(`http://localhost:3000/favorites?trackId=${song.trackId}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data.length === 0) {
+          fetch("http://localhost:3000/favorites", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(song)
+          });
+        }
+      });
+  }
+  
   
   
 
@@ -65,25 +81,29 @@ function App() {
             element={
               <>
                 <p>Discover trending tracks, featured artists, and editor’s picks!</p>
-                <SongList songs={songs}/>
-                <Trending />
-                <PopularArtists />
-                <NewReleases />
-                <EditorsPicks />
+                <SongList songs={songs} onAddToFavorites={handleAddToFavorites}/>
+                <Trending onAddToFavorites={handleAddToFavorites} />
+                <PopularArtists onAddToFavorites={handleAddToFavorites} />
+                <NewReleases onAddToFavorites={handleAddToFavorites} />
+                <EditorsPicks onAddToFavorites={handleAddToFavorites}/>
               </>
             
             }
           />
 
             <Route path="/artist/:id" element={<ArtistPage/>} />
-        </Routes>
+            
 
-        
+           <Route path="/favorites" element={<Favorites onAddToFavorites={handleAddToFavorites} />}  />
 
-      </div>
-    </Router>
-    
-  );
+      </Routes>
+
+      
+
+    </div>
+  </Router>
+  
+);
 }
 
-export default App;
+export default App;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

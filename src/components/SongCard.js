@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom"
 import styles from "./SongCard.module.css";
 
-function SongCard({ song }) {
+function SongCard({ song  , onAddToFavorites}) {
   const { trackName, artistName, artworkUrl100, previewUrl,artistId } = song;
   return (
     <div className={styles.songCard}>
@@ -21,7 +21,9 @@ function SongCard({ song }) {
         
 
       )}
-      console.log("Navigating to artistId:", artistId);
+      {/*mkuu fav utton*/}
+      <button onClick={() => onAddToFavorites(song)}>❤️ Favorite</button>
+     
     </div>
   );
 }

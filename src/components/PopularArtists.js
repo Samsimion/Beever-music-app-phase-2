@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
-function PopularArtists() {
+function PopularArtists({ onAddToFavorites }) {
   const [popular, setPopular] = useState([]);
 
   useEffect(() => {
@@ -14,9 +14,9 @@ function PopularArtists() {
   return (
     <section>
       <h3>⭐ Popular Artists</h3>
-      <SongList songs={popular} />
+      <SongList songs={popular} onAddToFavorites={onAddToFavorites} />
     </section>
   );
 }
 
-export default PopularArtists;
+export default PopularArtists;                                
