@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
-function Trending({onAddToFavorites}){
+function Trending({onAddToFavorites, onAddToPlaylist, playlists}){
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Trending({onAddToFavorites}){
   return (
     <section>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
       <h3>🔥 Trending Now</h3>
-      <SongList songs={trending} onAddToFavorites={onAddToFavorites}/>
+      <SongList songs={trending} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists}/>
     </section>
   );
 }

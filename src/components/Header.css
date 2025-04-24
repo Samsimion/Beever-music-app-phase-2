@@ -18,3 +18,21 @@
   margin-top: 8px;
   color: #ccc;
 }
+
+.beever-header nav {
+  margin-top: 15px;
+}
+
+.beever-header a {
+  color: #ffd700; 
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.beever-header a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+

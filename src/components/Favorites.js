@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import SongCard from "./SongCard";
 
 
-function Favorites({ onAddToFavorites }) {
+function Favorites({ onAddToFavorites, onAddToPlaylist, playlists}) {
   const [favorites, setFavorites] = useState([]);
   const [genreFilter, setGenreFilter] = useState("All");
   const [sortBy, setSortBy] = useState("None");
@@ -26,7 +26,10 @@ function Favorites({ onAddToFavorites }) {
   .filter((song) => genreFilter === "All" || song.primaryGenreName === genreFilter)
   .sort((a, b) => {
     if (sortBy === "None") return 0;
-    return a[sortBy].localeCompare(b[sortBy]);
+    const valA = a[sortBy] || ""; 
+    const valB = b[sortBy] || "";
+    return valA.localeCompare(valB);
+
   });
 
 
@@ -54,7 +57,7 @@ function Favorites({ onAddToFavorites }) {
       {filteredFavorites.map((song) => (
         <div key={song.id}>
           <p>{song.trackName} by {song.artistName}</p>
-          <SongCard song={song} onAddToFavorites={onAddToFavorites} />
+          <SongCard song={song} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists}/>
           <button onClick={() => handleDelete(song.id)}>Remove</button>
         </div>
       ))}
