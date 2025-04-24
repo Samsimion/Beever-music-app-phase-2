@@ -12,7 +12,7 @@ import GenreFilter from "./components/GenreFilter";
 import Favorites from "./components/Favorites";
 import CreatePlaylist from "./components/CreatePlaylist";
 import PlaylistPage from "./components/PlaylistPage";
-
+import './App.css'
 
 
 function MainApp() {

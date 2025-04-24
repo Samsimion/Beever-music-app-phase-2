@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import SongCard from "./SongCard";
+import styles from "./favorite.css"; // Import your CSS module
 
-
-function Favorites({ onAddToFavorites, onAddToPlaylist, playlists}) {
+function Favorites({ onAddToFavorites, onAddToPlaylist, playlists }) {
   const [favorites, setFavorites] = useState([]);
   const [genreFilter, setGenreFilter] = useState("All");
   const [sortBy, setSortBy] = useState("None");
 
-
   useEffect(() => {
     fetch("http://localhost:3000/favorites")
       .then((res) => res.json())
-      .then((data) => { console.log(data); setFavorites(data)});
+      .then((data) => { console.log(data); setFavorites(data) });
   }, []);
 
   function handleDelete(id) {
@@ -23,44 +22,50 @@ function Favorites({ onAddToFavorites, onAddToPlaylist, playlists}) {
   }
 
   const filteredFavorites = favorites
-  .filter((song) => genreFilter === "All" || song.primaryGenreName === genreFilter)
-  .sort((a, b) => {
-    if (sortBy === "None") return 0;
-    const valA = a[sortBy] || ""; 
-    const valB = b[sortBy] || "";
-    return valA.localeCompare(valB);
-
-  });
-
+    .filter((song) => genreFilter === "All" || song.primaryGenreName === genreFilter)
+    .sort((a, b) => {
+      if (sortBy === "None") return 0;
+      const valA = a[sortBy] || "";
+      const valB = b[sortBy] || "";
+      return valA.localeCompare(valB);
+    });
 
   return (
-    <div>
+    <div className={styles.container}>
       <h2>Your Favorites</h2>
-      <div>
+      <div className={styles.filterSection}>
+        <div>
           <label>Filter by Genre:</label>
           <select onChange={(e) => setGenreFilter(e.target.value)} value={genreFilter}>
             <option value="All">All</option>
-            {[...new Set(favorites.map((f) => f.primaryGenreName))].map((genre) => (                
+            {[...new Set(favorites.map((f) => f.primaryGenreName))].map((genre) => (
               <option key={genre} value={genre}>{genre}</option>
             ))}
-          </select>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+          </select>
+        </div>
 
+        <div>
           <label>Sort by:</label>
           <select onChange={(e) => setSortBy(e.target.value)} value={sortBy}>
             <option value="None">None</option>
             <option value="trackName">Title</option>
-            <option value="artistName">Artis                                                                                                                                                                                                                                                                                                                                                                                t</option>
+            <option value="artistName">Artist</option>
           </select>
+        </div>
       </div>
 
-                        
-      {filteredFavorites.map((song) => (
-        <div key={song.id}>
-          <p>{song.trackName} by {song.artistName}</p>
-          <SongCard song={song} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists}/>
-          <button onClick={() => handleDelete(song.id)}>Remove</button>
-        </div>
-      ))}
+      <div className={styles.songList}>
+        {filteredFavorites.map((song) => (
+          <div key={song.id} className={styles.songCardWrapper}>
+            <div className={styles.songDetails}>
+              <p className={styles.songTitle}>{song.trackName}</p>
+              <p className={styles.artistName}>{song.artistName}</p>
+            </div>
+            <SongCard song={song} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists} />
+            <button className={styles.removeButton} onClick={() => handleDelete(song.id)}>Remove</button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
