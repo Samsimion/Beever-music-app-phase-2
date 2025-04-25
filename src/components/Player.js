@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./Player.module.css";
 
+// This component displays a music player for the selected song
 function Player({ previewUrl, trackName }) {
   if (!previewUrl) return null;
 
