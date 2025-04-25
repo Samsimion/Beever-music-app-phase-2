@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SongCard from "./SongCard";
-import styles from "./favorite.css"; // Import your CSS module
+import styles from "./favorite.css"; 
 
 function Favorites({ onAddToFavorites, onAddToPlaylist, playlists }) {
   const [favorites, setFavorites] = useState([]);

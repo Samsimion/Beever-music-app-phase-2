@@ -1,8 +1,8 @@
-// src/components/GenreFilter.js
+
 import React from "react";
 import styles from "./GenreFilter.module.css";
 
-// Map user-facing genre buttons to more accurate search terms
+
 const genreMap = {
 
     Rap: "hip hop music",

@@ -53,7 +53,7 @@ function MainApp() {
     fetch(`https://itunes.apple.com/search?term=${genreSearchTerm}&media=music`)
       .then((res) => res.json())
       .then((data) => {
-        const genreName = getGenreNameFromSearchTerm(genreSearchTerm); // see below
+        const genreName = getGenreNameFromSearchTerm(genreSearchTerm); 
         const filtered = data.results.filter(
           (track) => track.primaryGenreName && track.primaryGenreName.toLowerCase().includes(genreName.toLowerCase())
         );
