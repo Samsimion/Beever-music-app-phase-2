@@ -1,4 +1,4 @@
-// src/components/EditorsPicks.js
+
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
@@ -13,7 +13,7 @@ function EditorsPicks({onAddToFavorites, onAddToPlaylist, playlists}) {
  
   return (
     <section>
-      <h3>🎧 Editor’s Picks</h3>
+      <h3>🎧 Editor’s Picks.</h3>
       <SongList songs={editorPicks} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists} />
     </section>
   );
