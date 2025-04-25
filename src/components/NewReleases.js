@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
+// This component fetches new releases from the iTunes API and displays them
 function NewReleases({ onAddToFavorites,  onAddToPlaylist, playlists}) {
   const [newReleases, setNewReleases] = useState([]);
 
