@@ -7,12 +7,14 @@ function Favorites({ onAddToFavorites, onAddToPlaylist, playlists }) {
   const [genreFilter, setGenreFilter] = useState("All");
   const [sortBy, setSortBy] = useState("None");
 
+  // Fetch favorites from the server
   useEffect(() => {
     fetch("http://localhost:3000/favorites")
       .then((res) => res.json())
       .then((data) => { console.log(data); setFavorites(data) });
   }, []);
 
+  // Handle the case when the user removes a song from favorites
   function handleDelete(id) {
     fetch(`http://localhost:3000/favorites/${id}`, {
       method: "DELETE",
@@ -21,6 +23,7 @@ function Favorites({ onAddToFavorites, onAddToPlaylist, playlists }) {
     });
   }
 
+  // Handle the case when the user adds a song to favorites
   const filteredFavorites = favorites
     .filter((song) => genreFilter === "All" || song.primaryGenreName === genreFilter)
     .sort((a, b) => {
@@ -30,6 +33,7 @@ function Favorites({ onAddToFavorites, onAddToPlaylist, playlists }) {
       return valA.localeCompare(valB);
     });
 
+  // Handle the case when the user adds a song to favorites
   return (
     <div className={styles.container}>
       <h2>Your Favorites</h2>
