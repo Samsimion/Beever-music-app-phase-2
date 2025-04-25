@@ -1,0 +1,148 @@
+/* PlaylistPage.module.css */
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+.header {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #ffd700, #daa520);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.playlistList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.playlistItem {
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #181818;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.playlistItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  border-color: #8a2be2;
+}
+
+.playlistHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.playlistName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlistHeader input {
+  flex-grow: 1;
+  padding: 0.5rem 1rem;
+  background-color: #282828;
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.playlistHeader input:focus {
+  outline: none;
+  border-color: #8a2be2;
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+.playlistHeader button {
+  background: transparent;
+  border: none;
+  color: #b3b3b3;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playlistHeader button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.playlistHeader button:first-of-type:hover {
+  background-color: rgba(29, 185, 84, 0.1);
+  color: #1db954;
+}
+
+.playlistHeader button:last-of-type:hover {
+  background-color: rgba(255, 51, 102, 0.1);
+  color: #ff3366;
+}
+
+.tracksList {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tracksList li {
+  position: relative;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+      padding: 1.5rem;
+  }
+  
+  .header {
+      font-size: 2rem;
+  }
+  
+  .playlistName {
+      font-size: 1.2rem;
+  }
+  
+  .playlistHeader {
+      flex-wrap: wrap;
+  }
+  
+  .playlistHeader button {
+      font-size: 1rem;
+  }
+}
