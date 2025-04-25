@@ -203,6 +203,41 @@
       "currency": "USD",
       "primaryGenreName": "Reggae",
       "isStreamable": true
+    },
+    {
+      "id": "839d",
+      "wrapperType": "track",
+      "kind": "song",
+      "artistId": 368183298,
+      "collectionId": 1744776162,
+      "trackId": 1744776167,
+      "artistName": "Kendrick Lamar",
+      "collectionName": "Not Like Us - Single",
+      "trackName": "Not Like Us",
+      "collectionCensoredName": "Not Like Us - Single",
+      "trackCensoredName": "Not Like Us",
+      "artistViewUrl": "https://music.apple.com/us/artist/kendrick-lamar/368183298?uo=4",
+      "collectionViewUrl": "https://music.apple.com/us/album/not-like-us/1744776162?i=1744776167&uo=4",
+      "trackViewUrl": "https://music.apple.com/us/album/not-like-us/1744776162?i=1744776167&uo=4",
+      "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/df/05/e7/df05e74c-c4a1-b6ca-61b0-e2c36df3ebfd/mzaf_9714719170473697657.plus.aac.p.m4a",
+      "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d0/ef/b6/d0efb685-73be-fdee-58c9-be655f4cd4fd/24UMGIM51924.rgb.jpg/30x30bb.jpg",
+      "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d0/ef/b6/d0efb685-73be-fdee-58c9-be655f4cd4fd/24UMGIM51924.rgb.jpg/60x60bb.jpg",
+      "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/d0/ef/b6/d0efb685-73be-fdee-58c9-be655f4cd4fd/24UMGIM51924.rgb.jpg/100x100bb.jpg",
+      "collectionPrice": 1.29,
+      "trackPrice": 1.29,
+      "releaseDate": "2024-05-04T12:00:00Z",
+      "collectionExplicitness": "explicit",
+      "trackExplicitness": "explicit",
+      "discCount": 1,
+      "discNumber": 1,
+      "trackCount": 1,
+      "trackNumber": 1,
+      "trackTimeMillis": 274192,
+      "country": "USA",
+      "currency": "USD",
+      "primaryGenreName": "Hip-Hop/Rap",
+      "contentAdvisoryRating": "Explicit",
+      "isStreamable": true
     }
   ],
   "playlists": [
@@ -274,6 +309,39 @@
           "country": "USA",
           "currency": "USD",
           "primaryGenreName": "Folk",
+          "isStreamable": true
+        },
+        {
+          "wrapperType": "track",
+          "kind": "song",
+          "artistId": 564794863,
+          "collectionId": 1590446273,
+          "trackId": 1590446528,
+          "artistName": "Tommy Lee Sparta",
+          "collectionName": "Transition",
+          "trackName": "Trending (feat. Skillibeng)",
+          "collectionCensoredName": "Transition",
+          "trackCensoredName": "Trending (feat. Skillibeng)",
+          "artistViewUrl": "https://music.apple.com/us/artist/tommy-lee-sparta/564794863?uo=4",
+          "collectionViewUrl": "https://music.apple.com/us/album/trending-feat-skillibeng/1590446273?i=1590446528&uo=4",
+          "trackViewUrl": "https://music.apple.com/us/album/trending-feat-skillibeng/1590446273?i=1590446528&uo=4",
+          "previewUrl": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/27/c7/c0/27c7c02c-7200-20a3-60ee-67be5810a9eb/mzaf_15451943352026899928.plus.aac.p.m4a",
+          "artworkUrl30": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e7/12/81/e7128120-f13f-57b4-15bf-37efb6ab215e/0.jpg/30x30bb.jpg",
+          "artworkUrl60": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e7/12/81/e7128120-f13f-57b4-15bf-37efb6ab215e/0.jpg/60x60bb.jpg",
+          "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/e7/12/81/e7128120-f13f-57b4-15bf-37efb6ab215e/0.jpg/100x100bb.jpg",
+          "collectionPrice": 15.99,
+          "trackPrice": 0.99,
+          "releaseDate": "2021-11-05T12:00:00Z",
+          "collectionExplicitness": "notExplicit",
+          "trackExplicitness": "notExplicit",
+          "discCount": 2,
+          "discNumber": 2,
+          "trackCount": 13,
+          "trackNumber": 2,
+          "trackTimeMillis": 166154,
+          "country": "USA",
+          "currency": "USD",
+          "primaryGenreName": "Modern Dancehall",
           "isStreamable": true
         }
       ]
@@ -354,13 +422,13 @@
       ]
     },
     {
-      "id": "9660",
-      "name": "sali",
+      "id": "f435",
+      "name": "sam",
       "tracks": []
     },
     {
-      "id": "7532",
-      "name": "pd",
+      "id": "6792",
+      "name": "rap",
       "tracks": []
     }
   ]
