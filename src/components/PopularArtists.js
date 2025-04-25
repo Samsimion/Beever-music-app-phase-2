@@ -1,4 +1,4 @@
-// src/components/PopularArtists.js
+
 import React, { useEffect, useState } from "react";
 import SongList from "./SongList";
 
@@ -13,7 +13,7 @@ function PopularArtists({ onAddToFavorites,  onAddToPlaylist, playlists }) {
 
   return (
     <section>
-      <h3>⭐ Popular Artists</h3>
+      <h3>⭐ Popular Artists.</h3>
       <SongList songs={popular} onAddToFavorites={onAddToFavorites} onAddToPlaylist={onAddToPlaylist} playlists={playlists} />
     </section>
   );
