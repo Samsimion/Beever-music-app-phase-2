@@ -1,0 +1,88 @@
+
+.createPlaylistForm {
+    background-color: #181818;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+.createPlaylistForm:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    border-color: #8a2be2;
+}
+
+.createPlaylistForm input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #282828;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.createPlaylistForm input:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+.createPlaylistForm button {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.createPlaylistForm button:hover {
+    background-color: #9932cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.createPlaylistForm button:active {
+    transform: translateY(0);
+}
+
+
+@keyframes successPulse {
+    0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(138, 43, 226, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
+}
+
+.createPlaylistForm.success {
+    animation: successPulse 1s;
+}
+
+
+@media (min-width: 768px) {
+    .createPlaylistForm {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .createPlaylistForm input {
+        width: 70%;
+        margin-bottom: 0;
+    }
+    
+    .createPlaylistForm button {
+        width: 30%;
+    }
+}

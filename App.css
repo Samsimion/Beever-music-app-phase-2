@@ -1,0 +1,68 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background:black;
+  margin: 0;
+  padding: 0;
+  color: #e3e8f0;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+  color: #ff4bff;
+  text-shadow:
+    0 2px 4px rgba(255, 75, 255, 0.2),
+    0 0 10px rgba(255, 75, 255, 0.3);
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  animation: neonGlow 2s infinite alternate;
+}
+
+h1:hover {
+  transform: scale(1.05);
+  color: #ff00c1;
+  text-shadow:
+    0 0 12px rgba(255, 75, 255, 0.5),
+    0 0 20px rgba(255, 75, 255, 0.4);
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 75, 255, 0.2), 0 0 10px rgba(255, 75, 255, 0.3);
+    color: #ff4bff;
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 75, 255, 0.4), 0 0 18px rgba(255, 75, 255, 0.5);
+    color: #ff00c1;
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 75, 255, 0.6), 0 0 25px rgba(255, 75, 255, 0.7);
+    color: #ff4bff;
+  }
+}
+
+a {
+  color: #ff8f00;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(255, 75, 255, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+ 
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 75, 255, 0.2);
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+
+button:active {
+  transform: scale(0.98);
+}
