@@ -1,0 +1,88 @@
+.songCard {
+  border: 1px solid #999;
+  border-radius: 16px;
+  padding: 1rem;
+  width: 300px;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(255, 215, 0, 0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.songCard:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(255, 215, 0, 0.4);
+}
+
+.songCard img {
+  border-radius: 12px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(192, 192, 192, 0.4);
+  margin-bottom: 0.75rem;
+}
+
+.songCard h3 {
+  font-size: 1.2rem;
+  color: #c0c0c0; 
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.songCard p {
+  font-size: 1rem;
+  color: #ffd700; 
+  margin-bottom: 0.75rem;
+}
+
+.songCard audio {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  background-color: #222;
+}
+
+
+.songCard button {
+  background: linear-gradient(45deg, #ffd700, #c00eec);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+
+.songCard button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+  background: linear-gradient(45deg, #dcdcdc, #ff6666);
+}
+
+
+.songCard select {
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #999;
+  font-weight: 600;
+  width: 50%;
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.songCard select:hover {
+  border-color: #ffd700;
+}

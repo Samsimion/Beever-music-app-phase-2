@@ -1,0 +1,18 @@
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .player audio {
+    width: 300px;
+    margin-top: 10px;
+  }
+  
+  .player h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
