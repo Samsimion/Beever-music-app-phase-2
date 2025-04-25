@@ -3,6 +3,8 @@ import CreatePlaylist from "./CreatePlaylist";
 import SongCard from "./SongCard";
 import styles from "./PlaylistPage.module.css";
 
+//crud for playlist
+
 function PlaylistPage() {
   const [playlists, setPlaylists] = useState([]);
 

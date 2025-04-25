@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./CreatePlaylist.css";
 
+//playlist by sam
+
 function CreatePlaylist({ onPlaylistCreated }) {
     const [name, setName] = useState("");
     const [isSuccess, setIsSuccess] = useState(false);
