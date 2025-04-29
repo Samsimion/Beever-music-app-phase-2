@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./ArtistPage.module.css"; // Import the CSS module
 
+// coded by muchiri
+
 function ArtistPage() {
   const { id } = useParams();
   const [artistDetails, setArtistDetails] = useState(null);
